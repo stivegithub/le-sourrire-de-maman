@@ -19,6 +19,7 @@ const Newsletter = () => {
     setValid(response.data.message)
     setEmail('')
     console.log(response.data.message)
+    console.log(valid)
     setState(false)
     setShowNotification(true);
     setTimeout(() => {

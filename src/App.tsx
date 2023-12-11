@@ -1,6 +1,6 @@
 import React, { FunctionComponent} from 'react';
 import './App.css';
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Route,  Routes } from 'react-router-dom';
 import PageAccueil from './pages/PageAccueil';
 import PageAssistanceDomicile from './pages/PageAssistanceDomicile';
 

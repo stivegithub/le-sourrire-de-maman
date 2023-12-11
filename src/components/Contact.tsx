@@ -38,6 +38,7 @@ const Contact = () => {
       setShowNotification(true);
       setTimeout(() => {
         setShowNotification(false);
+        console.log(valid)
       }, 3000);
     }
    }

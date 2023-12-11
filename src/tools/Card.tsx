@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { FunctionComponent } from 'react';
-import img1 from '../../src/images/1.jpeg'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import { Link } from 'react-router-dom';
 
