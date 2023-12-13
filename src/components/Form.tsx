@@ -1,3 +1,5 @@
+// Form.tsx
+
 import React, { useState, ChangeEvent, FormEvent } from "react";
 
 interface FormProps {}
@@ -12,8 +14,8 @@ const Form: React.FC<FormProps> = () => {
 
   const matieresOptions: string[] = [
     "Mathématiques",
-    "Sciences",
-    "Histoire",
+    "Sciences Physique",
+    "Chimie",
     "Français",
     "Anglais",
   ];
@@ -51,11 +53,11 @@ const Form: React.FC<FormProps> = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-8 p-6 bg-white rounded-md shadow-md">
+    <div className="max-w-md mx-auto  p-6 bg-gray-700 text-white ">
       <h2 className="text-2xl font-semibold text-center mb-4">Formulaire</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label htmlFor="prenom" className="block text-sm font-medium text-gray-600">
+          <label htmlFor="prenom" className="block text-sm font-medium text-white">
             Prénom
           </label>
           <input
@@ -63,13 +65,14 @@ const Form: React.FC<FormProps> = () => {
             id="prenom"
             name="prenom"
             value={prenom}
+            placeholder="Entrez votre prénom."
             onChange={handleChange}
             className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
             required
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="niveauScolaire" className="block text-sm font-medium text-gray-600">
+          <label htmlFor="niveauScolaire" className="block text-sm font-medium text-white">
             Niveau Scolaire
           </label>
           <select
@@ -77,7 +80,7 @@ const Form: React.FC<FormProps> = () => {
             name="niveauScolaire"
             value={niveauScolaire}
             onChange={handleChange}
-            className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+            className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 text-gray-800"
             required
           >
             <option value="" disabled>
@@ -92,7 +95,7 @@ const Form: React.FC<FormProps> = () => {
         </div>
         {niveauScolaire === "Primaire" && (
           <div className="mb-4">
-            <label htmlFor="classe" className="block text-sm font-medium text-gray-600">
+            <label htmlFor="classe" className="block text-sm font-medium text-white">
               Classe
             </label>
             <select
@@ -100,19 +103,24 @@ const Form: React.FC<FormProps> = () => {
               name="classe"
               value={classe}
               onChange={handleChange}
-              className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+              className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 text-gray-800"
               required
             >
               <option value="" disabled>
                 Sélectionner la classe
               </option>
-              <option value="Papa">Papa</option>
+              <option value="SIL">SIL</option>
+              <option value="CP">CP</option>
+              <option value="CE1">CE1</option>
+              <option value="CE2">CE2</option>
+              <option value="CM1">CM1</option>
+              <option value="CM2">CM2</option>
             </select>
           </div>
         )}
         {niveauScolaire === "Secondaire" && (
           <div className="mb-4">
-            <label htmlFor="classe" className="block text-sm font-medium text-gray-600">
+            <label htmlFor="classe" className="block text-sm font-medium text-white">
               Classe
             </label>
             <select
@@ -120,19 +128,30 @@ const Form: React.FC<FormProps> = () => {
               name="classe"
               value={classe}
               onChange={handleChange}
-              className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+              className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 text-gray-800"
               required
             >
               <option value="" disabled>
                 Sélectionner la classe
               </option>
-              <option value="Maman">Maman</option>
+              <option value="6EME">6EME</option>
+              <option value="5EME">5EME</option>
+              <option value="4EME">4EME</option>
+              <option value="3EME">3EME</option>
+              <option value="2ND A">2ND A</option>
+              <option value="2ND C">2ND C</option>
+              <option value="1ere C">1ere C</option>
+              <option value="1ere D">1ere D</option>
+              <option value="1ere A">1ere A</option>
+              <option value="TLE C">TLE C</option>
+              <option value="TLE D">TLE D</option>
+              <option value="TLE A">TLE A</option>
             </select>
           </div>
         )}
         {niveauScolaire === "Maternelle" && (
           <div className="mb-4">
-            <label htmlFor="classe" className="block text-sm font-medium text-gray-600">
+            <label htmlFor="classe" className="block text-sm font-medium text-white">
               Classe
             </label>
             <select
@@ -140,7 +159,7 @@ const Form: React.FC<FormProps> = () => {
               name="classe"
               value={classe}
               onChange={handleChange}
-              className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+              className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 text-gray-800"
               required
             >
               <option value="" disabled>
@@ -151,10 +170,10 @@ const Form: React.FC<FormProps> = () => {
           </div>
         )}
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-600">Matieres</label>
-          <div className="flex space-x-2">
+          <label className="block text-sm font-medium text-white">Matieres</label>
+          <div className="flex flex-col gap-3">
             {matieresOptions.map((matiere) => (
-              <label key={matiere} className="inline-flex items-center">
+              <label key={matiere} className="inline-flex items-center text-white">
                 <input
                   type="checkbox"
                   name="matieres"
@@ -163,10 +182,10 @@ const Form: React.FC<FormProps> = () => {
                   onChange={handleChange}
                   className="form-checkbox h-5 w-5 text-blue-600"
                 />
-                <span className="ml-2 text-sm text-gray-700">{matiere}</span>
+                <span className="ml-2 text-sm">{matiere}</span>
               </label>
             ))}
-          </div>
+          </div>         
         </div>
         <div className="text-center">
           <button
