@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaFacebook, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 
@@ -33,13 +34,13 @@ const Localisation: React.FC = () => {
       </div>
 
       <div className="flex items-center">
-        <a href="https://www.facebook.com/profile.php?id=100084170042632&mibextid=hrBMPu" target="_blank" rel="noopener noreferrer" className="text-2xl mr-4 text-blue-600">
+        <a href="https://www.facebook.com/profile.php?id=100071143984953" target="_blank" rel="noopener noreferrer" className="text-2xl mr-4 text-blue-600">
           <FaFacebook />
         </a>
         <a href="https://wa.me/qr/5XNVLTT3RFQTC1 " target="_blank" rel="noopener noreferrer" className="text-2xl mr-4 text-green-600">
           <FaWhatsapp />
         </a>
-        <a href="https://instagram.com/renolux_cameroun?igshid=OGQ5ZDc2ODk2ZA==" target="_blank" rel="noopener noreferrer" className="text-2xl mr-4 text-pink-600">
+        <a href="" target="_blank" rel="noopener noreferrer" className="text-2xl mr-4 text-pink-600">
           <FaInstagram />
         </a>
       </div>

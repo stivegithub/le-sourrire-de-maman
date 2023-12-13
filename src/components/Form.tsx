@@ -53,8 +53,8 @@ const Form: React.FC<FormProps> = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto  p-6 bg-gray-700 text-white ">
-      <h2 className="text-2xl font-semibold text-center mb-4">Formulaire</h2>
+    <div className="max-w-md mx-auto  p-6 bg-gray-700  ">
+      <h2 className="text-2xl font-semibold text-center mb-4 text-white">Formulaire</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="prenom" className="block text-sm font-medium text-white">
@@ -67,7 +67,7 @@ const Form: React.FC<FormProps> = () => {
             value={prenom}
             placeholder="Entrez votre prénom."
             onChange={handleChange}
-            className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+            className=" mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
             required
           />
         </div>
