@@ -19,7 +19,7 @@ const Localisation: React.FC = () => {
 
       <div className="flex items-center mb-4">
         <FaEnvelope className="text-2xl mr-4" />
-        <p>joshco3@gmail.com</p>
+        <p>joshandco@gmail.com </p>
       </div>
 
       <div className="mb-4">
