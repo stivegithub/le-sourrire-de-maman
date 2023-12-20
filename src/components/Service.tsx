@@ -14,7 +14,7 @@ const Service:FunctionComponent = () => {
 
         <div className='sm:flex sm:justify-between gap-7 mt-4 '>
             <Card photo={c1} redirection='/assistance-a-domicile' description='un suivi personnalisé avec des enseignants hautement qualifiés dans leur domaine. ' bouton='En savoir plus' submit={()=>{}}  titre='Assistance a domicile'/>
-            <Card photo={c2} redirection='/papa' description='Des questionnaires pour enrichir votre culture generale et revisions' bouton='En savoir plus' submit={()=>{}}  titre='Quizz et challenge'/>
+            <Card photo={c2} redirection='/quizz' description='Des questionnaires pour enrichir votre culture generale et revisions' bouton='En savoir plus' submit={()=>{}}  titre='Quizz et challenge'/>
             <Card photo={c3} redirection='/maman' description='Des activités extra-scolaires qui contribue a faire de vous des personnes integres et complete dans la societé' bouton='En savoir plus' submit={()=>{}}  titre='Divertissement & Loisirs'/>
 
 

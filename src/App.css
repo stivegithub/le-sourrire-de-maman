@@ -2,6 +2,23 @@
   text-align: center;
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-infinite {
+  animation: rotate infinite;
+}
+
+.hover\:rotate-0:hover {
+  transform: rotate(0deg);
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
